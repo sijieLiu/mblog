@@ -1,0 +1,35 @@
+{
+  "canisters": {
+    "mblog": {
+      "main": "src/mblog/main.mo",
+      "type": "motoko"
+    },
+    "mblog_assets": {
+      "dependencies": [
+        "mblog"
+      ],
+      "frontend": {
+        "entrypoint": "src/mblog_assets/src/index.html"
+      },
+      "source": [
+        "src/mblog_assets/assets",
+        "dist/mblog_assets/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "dfx": "0.9.2",
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  },
+  "version": 1
+}
