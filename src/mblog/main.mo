@@ -40,7 +40,16 @@ actor Mblog {
   };
 
   public shared func follow(id: Principal) : async(){
+    for (user in Iter.fromList(followed)){ 
+      if (Principal.toText(user) == Principal.toText(id)) {
+        return
+      };
+    };
     followed := List.push(id, followed)
+  };
+
+  public shared func clearFollow(): async(){
+    followed := List.nil();
   };
 
   public shared query func follows() : async [Principal]{

@@ -3,6 +3,7 @@ export interface Message { 'text' : string, 'time' : Time, 'author' : string }
 export type Time = bigint;
 export interface User { 'id' : Principal, 'name' : [] | [string] }
 export interface _SERVICE {
+  'clearFollow' : () => Promise<undefined>,
   'follow' : (arg_0: Principal) => Promise<undefined>,
   'follows' : () => Promise<Array<Principal>>,
   'get_follow_data' : () => Promise<Array<User>>,

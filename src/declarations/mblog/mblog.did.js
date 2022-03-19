@@ -7,6 +7,7 @@ export const idlFactory = ({ IDL }) => {
     'author' : IDL.Text,
   });
   return IDL.Service({
+    'clearFollow' : IDL.Func([], [], []),
     'follow' : IDL.Func([IDL.Principal], [], []),
     'follows' : IDL.Func([], [IDL.Vec(IDL.Principal)], ['query']),
     'get_follow_data' : IDL.Func([], [IDL.Vec(User)], []),
