@@ -111,7 +111,7 @@ async function load_posts(){
 async function load_timeline(){
   let posts_section = document.getElementById("posts");
   let author = document.getElementById("name");
-  author.innerHTML = "All Posts (followed)";
+  author.innerHTML = "All Posts (timeline)";
   let posts = await mblog.timeline(0);
   console.log(posts);
   //调用mblog canister的posts方法，传time since
@@ -195,13 +195,11 @@ async function get_name(){
   if (author_name == "") {
     author_name = await mblog.get_name();
   }
+  document.getElementById("author").innerText = author_name;
 }
 
 function load() {
   get_name();
-  if (author_name) {
-    document.getElementById("author").innerText = author_name;
-  } 
   let post_button = document.getElementById("post");
   post_button.onclick = post;
   load_follows();
