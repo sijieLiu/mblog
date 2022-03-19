@@ -1,0 +1,7 @@
+type List<T> = ?(T, List<T>);
+type Message = {author : Text; text : Text; time : Time};
+actor {
+  stable var _author : Text;
+  stable var followed : ?(Principal, List<Principal>);
+  stable var messages : ?(Message, List<Message>)
+};

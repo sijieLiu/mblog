@@ -3,20 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>mblog</title>
+    <title>mBlog</title>
     <base href="/" />
     <link rel="icon" href="favicon.ico" />
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
     <link type="text/css" rel="stylesheet" href="main.css" />
   </head>
   <body>
+    <header><h1>mBlog</h1></header>
     <main>
-      <img src="logo.png" alt="DFINITY logo" />
-      <form action="#">
-        <label for="name">Enter your name: &nbsp;</label>
-        <input id="name" alt="Name" type="text" />
-        <button type="submit">Click Me!</button>
-      </form>
-      <section id="greeting"></section>
+      <h3><span id="author">I</span> followed</h3>
+
+      <section id="follows"></section>
+
+      <h4 id="name"></h4>
+      <section id="posts">
+      </section>
+
+      <section id="writepost">
+      <h2>post</h2>
+      <label for="message">写点什么?</label>
+      <textarea id="message" placeholder="Write something.."></textarea>
+      <label for="otp">OTP</label>
+      <input id="otp" placeholder="密码"/>
+      <button id="post">Post</button>
+      <p id="error"></p>
+      </section>
     </main>
   </body>
 </html>

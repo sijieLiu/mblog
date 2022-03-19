@@ -35,3 +35,39 @@ button[type="submit"] {
 #greeting:empty {
     display: none;
 }
+
+.posts {
+    display: none;
+}
+p {
+    padding-bottom: 5px;
+    border-bottom: 1px dashed;
+}
+p .content{
+    font-size: 20px;
+    padding: 2px;
+    display: block;
+}
+
+p .author, p .time {
+    padding: 2px;
+    font-size: 18px;
+    display: block;
+    text-align: right;
+}
+p .time {
+    font-size: 13px;
+}
+
+#follows a {
+    display: block;
+    cursor: pointer;
+}
+
+#follows .show{
+    color: rgb(192, 164, 3);
+}
+
+#writepost {
+    display: none;
+}
